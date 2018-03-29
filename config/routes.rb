@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   root to: "dashboards#index"
 
+  resources :contents, only: [:new, :create]
+
 end
