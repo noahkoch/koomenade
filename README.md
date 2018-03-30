@@ -14,7 +14,7 @@ Some of the best services range from landing page generators to drag and drop we
 
 As you get cheaper, services require more technical knowledge. Even if you have the knowledge, like I do, it's a hassle to go into my server and change some config files every time I want to set up a new domain on my site. 
 
-* TL;DR: The goal of Koomenade is to be the [Microsoft Paint](https://www.youtube.com/watch?v=v2g5qbvb7F4) of static website hosting; Stupid easy to get going but still allows for more complex ideas to be fleshed out *
+**TL;DR: The goal of Koomenade is to be the [Microsoft Paint](https://www.youtube.com/watch?v=v2g5qbvb7F4) of static website hosting; Stupid easy to get going but still allows for more complex ideas to be fleshed out**
 
 ## More details to come
 
