@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   root to: "dashboards#index"
 
-  resources :contents, only: [:new, :create]
+  resources :sites do
+    resources :documents
+    resources :folders
+  end
 
+  get ":username/:site_name/*document_path", to: "sites#render_view", as: :render_view
 end

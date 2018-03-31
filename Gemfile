@@ -17,7 +17,8 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'haml'
 gem "haml-rails", "~> 1.0"
-
+gem "wysiwyg-rails"
+gem 'codemirror-rails'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'

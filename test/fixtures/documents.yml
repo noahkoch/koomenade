@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  contents: MyText
+  site: one
+  user: one
+  folder: one
+
+two:
+  name: MyString
+  contents: MyText
+  site: two
+  user: two
+  folder: two

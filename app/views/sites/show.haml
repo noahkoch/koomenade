@@ -1,0 +1,4 @@
+= link_to "+ New Document", new_site_document_path(site_id: params[:id]), class: "btn btn-success"
+= link_to "+ New Folder", new_site_folder_path(site_id: params[:id]), class: "btn btn-success"
+
+= render partial: "layouts/document_list", locals: { folders: @folders, documents: @documents, site: @site }

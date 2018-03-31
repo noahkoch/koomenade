@@ -1,0 +1,7 @@
+- if @view
+  = load_page(@view.contents.html_safe)
+- else
+  %title Oh No!
+  %center
+    %h1 
+      404!

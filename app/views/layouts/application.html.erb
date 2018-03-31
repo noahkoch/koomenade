@@ -10,24 +10,13 @@
 
   <body>
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">Fixed top</a>
+      <%= link_to "Koomenade", root_path, class: "navbar-brand" %>
     </nav>
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-          <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  Dashboard <span class="sr-only">(current)</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      <main class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-        <%= yield %>
-      </main>
+    <div class="container mt-5">
+      <div class="pb-3 ">
+        <%= bread_crumbs %>
+      </div>
+      <%= yield %>
     </div>
   </body>
 </html>

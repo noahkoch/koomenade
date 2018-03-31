@@ -1,0 +1,33 @@
+%table.table.mt-5
+  %thead
+    %th Name 
+    %th &nbsp; 
+  %tbody
+    - if @folder
+      %tr
+        %td
+          - if @folder.folder  
+            = link_to site_folder_path(site, @folder.folder) do
+              %i.fa.fa-folder 
+              \..
+          - else
+            = link_to site_path(site) do
+              %i.fa.fa-folder 
+              \..
+        %td &nbsp;
+    - folders.each do |folder|
+      %tr
+        %td
+          %i.fa.fa-folder
+          = folder.name
+        %td
+          = link_to "Open", site_folder_path(site, folder), class: "btn btn-outline-primary btn-sm"
+    - documents.each do |document| 
+      %tr
+        %td
+          %i.fa.fa-file
+          = document.name
+        %td
+          = link_to "Edit", edit_site_document_path(site, document), class: "btn btn-outline-secondary btn-sm"
+          = link_to "Edit Raw", edit_site_document_path(site, document, raw: true), class: "btn btn-outline-secondary btn-sm"
+          = link_to "View Live", render_view_path(username: current_user.username, site_name: site.name, document_path: document.name), target: "_BLANK", class: "btn btn-outline-primary btn-sm"

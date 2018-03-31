@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  site: one
+  folder: one
+  name: MyString
+  user: one
+
+two:
+  site: two
+  folder: two
+  name: MyString
+  user: two

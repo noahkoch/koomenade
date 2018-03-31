@@ -1,0 +1,7 @@
+= f.hidden_field :folder_id
+.form-group
+  = f.text_field :name, class: "form-control", placeholder: "Name"
+.form-group
+  = f.text_area :contents, class: "raw-editor"
+= f.submit "Save", class: "btn btn-success"
+
