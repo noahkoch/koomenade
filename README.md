@@ -16,6 +16,53 @@ As you get cheaper, services require more technical knowledge. Even if you have 
 
 **TL;DR: The goal of Koomenade is to be the [Microsoft Paint](https://www.youtube.com/watch?v=v2g5qbvb7F4) of static website hosting; Stupid easy to get going but still allows for more complex ideas to be fleshed out**
 
+## KQL Markup Notation
+
+KQL (Koomenade Query Language) is a basic markup for pull things out of the built in Koomenade Data Store.
+
+### Basics
+
+```
+[kql::people.each.{ person:last_name }.{ person:first_name }]
+```
+
+Every query will be surrounded by square brackets and begin with `kql::table_name`. Though it is reccomended, your table name does not need to be plural. However, when calling an each loop, like in the example, your method to call each row must be singular.
+
+Also, notice every statement is separated by a period.
+
+**Method chaining is not yet supported**
+
+#### Supported methods
+
+* `each`
+* `limit`
+* `offset`
+* `length`
+
+**`each`**
+```
+[kql::people.each.{ person:last_name }]
+```
+
+**`Limit`**
+
+```
+[kql::people.limit.{10}]
+```
+
+**`Offset`**
+
+```
+[kql::people.offset.{5}]
+```
+
+**`Length`**
+
+```
+[kql::people.length]
+```
+
+
 ## More details to come
 
 - Basic data store
