@@ -31,6 +31,14 @@ class KQLDataStore < ApplicationRecord
       self._offset = 0 
     end
 
+    def write attributes_hash
+      if data_store.values.empty?
+        data_store.values = []
+      end
+      data_store.values << attributes_hash
+      data_store.save
+    end
+
     def get
       if _each
         _each
@@ -78,7 +86,10 @@ class KQLDataStore < ApplicationRecord
       each_obj_name = self.data_store.name.singularize
       column_name = arg.match(/#{each_obj_name}:(\w*)/)[1]
       string_to_replace = arg.match(/\{(.*)\}/)[1] 
-      string_to_replace.gsub("#{each_obj_name}:#{column_name}", data_value[column_name])
+      string_to_replace.gsub(
+        "#{each_obj_name}:#{column_name}", 
+        (data_value[column_name] || "")
+      )
     end
 
   end

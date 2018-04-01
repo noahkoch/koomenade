@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   end
 
   get ":username/:site_name/*document_path", to: "sites#render_view", as: :render_view
+
+  post ":username/:site_name/*document_path", to: "sites#post_values"
 end

@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331173428) do
+ActiveRecord::Schema.define(version: 20180401002346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "available_forms", force: :cascade do |t|
+    t.bigint "document_id"
+    t.string "table_name"
+    t.jsonb "fields"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["document_id"], name: "index_available_forms_on_document_id"
+  end
 
   create_table "documents", force: :cascade do |t|
     t.string "name"
@@ -91,6 +100,7 @@ ActiveRecord::Schema.define(version: 20180331173428) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "available_forms", "documents"
   add_foreign_key "documents", "folders"
   add_foreign_key "documents", "sites"
   add_foreign_key "documents", "users"
