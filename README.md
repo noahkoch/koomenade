@@ -62,12 +62,19 @@ Also, notice every statement is separated by a period.
 [kql::people.length]
 ```
 
+## Creating forms
+
+```
+<form [kqlform::people first_name:string last_name:string]>
+  <input type="text" [kqlfield::people:first_name]>
+  <input type="text" [kqlfield::people:last_name]>
+  <input type="submit">
+</form>
+```
+
+Because of this declaration, Koomenade will validate each form submission so people can't just willy nilly edit the generated HTML and screw up your data structure. More validations are coming as well as authentication.
 
 ## More details to come
 
-- Basic data store
-- Built in editor
-  - Markdown
-  - WYSIWYG
-  - HTML/CSS/JS
 - Auto include libraries
+- Authentication
