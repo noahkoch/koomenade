@@ -76,4 +76,8 @@ Because of this declaration, Koomenade will validate each form submission so peo
 
 ## Progress
 
-(Trello Board)[https://trello.com/b/A5FWe4WK]
+[Trello Board](https://trello.com/b/A5FWe4WK)
+
+## Contributing
+
+That'd be nice!
